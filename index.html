@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SCALE Lab – Smart Coordination and Locomotion Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">S</span>
+        <div class="logo-text">
+          <span class="logo-name">SCALE Lab</span>
+          <span class="logo-full">Smart Coordination and Locomotion</span>
+        </div>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="team.html" class="nav-link">Team</a>
+        <a href="publications.html" class="nav-link">Publications</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-badge">Est. 2019 &mdash; University Research Group</div>
+        <h1 class="hero-title">Advancing the science of <em>coordinated motion</em></h1>
+        <p class="hero-sub">SCALE Lab investigates the fundamental principles governing intelligent locomotion and multi-agent coordination—from biological systems to autonomous robots.</p>
+        <div class="hero-actions">
+          <a href="publications.html" class="btn btn-primary">View Publications</a>
+          <a href="contact.html" class="btn btn-ghost">Join the Lab</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" class="hero-svg">
+          <defs>
+            <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+              <path d="M0,0 L6,3 L0,6 Z" fill="#9ba3af" />
+            </marker>
+          </defs>
+          <!-- Nodes -->
+          <circle cx="100" cy="150" r="18" class="node node-a" />
+          <circle cx="220" cy="80" r="14" class="node node-b" />
+          <circle cx="220" cy="220" r="14" class="node node-b" />
+          <circle cx="350" cy="50" r="11" class="node node-c" />
+          <circle cx="350" cy="150" r="18" class="node node-a" />
+          <circle cx="350" cy="250" r="11" class="node node-c" />
+          <circle cx="480" cy="100" r="14" class="node node-b" />
+          <circle cx="480" cy="200" r="14" class="node node-b" />
+          <circle cx="560" cy="150" r="18" class="node node-a" />
+          <!-- Edges -->
+          <line x1="118" y1="145" x2="204" y2="88" class="edge" />
+          <line x1="118" y1="155" x2="204" y2="212" class="edge" />
+          <line x1="234" y1="80" x2="338" y2="60" class="edge" />
+          <line x1="234" y1="88" x2="334" y2="143" class="edge" />
+          <line x1="234" y1="212" x2="338" y2="245" class="edge" />
+          <line x1="234" y1="220" x2="334" y2="158" class="edge" />
+          <line x1="368" y1="150" x2="465" y2="108" class="edge" />
+          <line x1="368" y1="158" x2="465" y2="196" class="edge" />
+          <line x1="494" y1="100" x2="545" y2="140" class="edge" />
+          <line x1="494" y1="200" x2="545" y2="160" class="edge" />
+          <!-- Labels -->
+          <text x="100" y="185" class="node-label">Env</text>
+          <text x="350" y="185" class="node-label">Policy</text>
+          <text x="560" y="185" class="node-label">Goal</text>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Research areas -->
+    <section class="section research-areas">
+      <div class="container">
+        <h2 class="section-title">Research Focus</h2>
+        <div class="cards-grid">
+          <div class="card">
+            <div class="card-icon">&#9672;</div>
+            <h3>Legged Locomotion</h3>
+            <p>Developing robust control frameworks for bipedal and quadrupedal robots navigating complex, unstructured terrain.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">&#9651;</div>
+            <h3>Multi-Agent Systems</h3>
+            <p>Scalable coordination algorithms that enable emergent cooperative behavior in large swarms of autonomous agents.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">&#9711;</div>
+            <h3>Biomechanics &amp; Neuroscience</h3>
+            <p>Uncovering neural and mechanical principles of animal locomotion to inspire bio-inspired robotic design.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">&#9670;</div>
+            <h3>Learning &amp; Adaptation</h3>
+            <p>Reinforcement learning and sim-to-real transfer for adaptive motor control in uncertain environments.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent news -->
+    <section class="section news-section">
+      <div class="container">
+        <h2 class="section-title">Recent News</h2>
+        <ul class="news-list">
+          <li class="news-item">
+            <span class="news-date">May 2025</span>
+            <span class="news-text">Paper accepted at <strong>RSS 2025</strong> — "Decentralized Gait Emergence in Quadrupedal Swarms"</span>
+          </li>
+          <li class="news-item">
+            <span class="news-date">Mar 2025</span>
+            <span class="news-text">Two papers accepted at <strong>ICRA 2025</strong> on terrain-adaptive locomotion and multi-robot planning</span>
+          </li>
+          <li class="news-item">
+            <span class="news-date">Jan 2025</span>
+            <span class="news-text">Dr. Chen receives <strong>NSF CAREER Award</strong> for work on bio-inspired locomotion</span>
+          </li>
+          <li class="news-item">
+            <span class="news-date">Oct 2024</span>
+            <span class="news-text">New collaboration with <strong>MIT CSAIL</strong> on scalable multi-agent reinforcement learning</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Affiliation strip -->
+    <section class="affil-strip">
+      <div class="container affil-inner">
+        <span>University of Southern California</span>
+        <span class="affil-dot">&bull;</span>
+        <span>Thomas Lord Department of Computer Science</span>
+        <span class="affil-dot">&bull;</span>
+        <span>Viterbi School of Engineering</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>&copy; 2025 SCALE Lab</span>
+      <span>Smart Coordination and Locomotion Laboratory</span>
+    </div>
+  </footer>
+
+  <script src="nav.js"></script>
+</body>
+</html>
