@@ -416,6 +416,8 @@ img { max-width: 100%; display: block; }
 }
 .pub-link:hover { background: var(--accent-l); text-decoration: none; }
 
+.pub-journal { font-style: italic; color: var(--text); }
+
 /* ── Contact page ── */
 .contact-grid {
   display: grid;
