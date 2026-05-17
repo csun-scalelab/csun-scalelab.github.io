@@ -7,6 +7,137 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body { background: #fff; }
+
+    .home-intro {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem 2.5rem;
+      text-align: center;
+    }
+    .home-logo {
+      width: 280px;
+      margin: 0 auto 2.25rem;
+      display: block;
+    }
+    .home-intro h1 {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+      font-weight: 400;
+      color: #0e1a2b;
+      line-height: 1.25;
+      margin-bottom: 1.1rem;
+    }
+    .home-intro p {
+      font-size: 1.05rem;
+      color: #4a5568;
+      line-height: 1.8;
+      margin-bottom: 1.75rem;
+    }
+    .home-intro-links {
+      display: flex;
+      gap: .75rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+    .home-btn {
+      font-size: .83rem;
+      font-family: 'DM Mono', monospace;
+      padding: .5rem 1.2rem;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: all .15s;
+      border: 1px solid #1d6fa4;
+      color: #1d6fa4;
+    }
+    .home-btn:hover { background: #1d6fa4; color: #fff; text-decoration: none; }
+    .home-btn.primary { background: #1d6fa4; color: #fff; }
+    .home-btn.primary:hover { background: #155a8a; }
+    .home-affil-line {
+      font-family: 'DM Mono', monospace;
+      font-size: .75rem;
+      color: #a0aec0;
+      letter-spacing: .04em;
+    }
+
+    .home-divider {
+      border: none;
+      border-top: 1px solid #e2e8f0;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .home-section {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+    .home-section-title {
+      font-family: 'DM Mono', monospace;
+      font-size: .73rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: #a0aec0;
+      margin-bottom: 1.25rem;
+    }
+
+    .research-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .research-item {
+      padding: 1.1rem 1.25rem;
+      border: 1px solid #e8edf2;
+      border-radius: 6px;
+      background: #f9f9f7;
+    }
+    .research-item h3 {
+      font-size: .93rem;
+      font-weight: 600;
+      color: #0e1a2b;
+      margin-bottom: .35rem;
+    }
+    .research-item p {
+      font-size: .84rem;
+      color: #4a5568;
+      line-height: 1.65;
+    }
+
+    .news-table { width: 100%; border-collapse: collapse; }
+    .news-table tr { border-bottom: 1px solid #e8edf2; }
+    .news-table tr:last-child { border-bottom: none; }
+    .news-table td { padding: .8rem 0; vertical-align: top; }
+    .news-table .nd {
+      font-family: 'DM Mono', monospace;
+      font-size: .73rem;
+      color: #a0aec0;
+      white-space: nowrap;
+      padding-right: 1.5rem;
+      padding-top: .95rem;
+    }
+    .news-table .nt { font-size: .9rem; color: #2d3748; line-height: 1.65; }
+    .news-table .nt strong { color: #0e1a2b; font-weight: 600; }
+
+    .home-footer-strip {
+      text-align: center;
+      padding: 1rem 1.5rem 2.5rem;
+      font-family: 'DM Mono', monospace;
+      font-size: .73rem;
+      color: #c0cad4;
+      letter-spacing: .03em;
+    }
+
+    .site-footer { background: #fff; border-top: 1px solid #e2e8f0; }
+    .footer-inner { color: #c0cad4; }
+
+    @media (max-width: 580px) {
+      .research-list { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
 
@@ -30,95 +161,80 @@
   </header>
 
   <main>
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-badge">California State University, Northridge &mdash; Mechanical Engineering</div>
-        <h1 class="hero-title">Advancing the science of <em>bio-inspired locomotion</em></h1>
-        <p class="hero-sub">SCALE Lab combines physics-based models with data-driven approaches to study locomotion and coordination in bio-inspired dynamical systems — from fish schools to bacteria.</p>
-        <div class="hero-actions">
-          <a href="publications.html" class="btn btn-primary">View Publications</a>
-          <a href="contact.html" class="btn btn-ghost">Join the Lab</a>
-        </div>
-      </div>
-      <div class="hero-visual" aria-hidden="true">
-        <img src="logo.png" alt="SCALE Lab Logo" style="width:100%;max-width:480px;opacity:.85;filter:brightness(0) invert(1);" />
-      </div>
-    </section>
 
-    <!-- Research areas -->
-    <section class="section research-areas">
-      <div class="container">
-        <h2 class="section-title">Research Focus</h2>
-        <div class="cards-grid">
-          <div class="card">
-            <div class="card-icon">&#9672;</div>
-            <h3>Bio-inspired Locomotion</h3>
-            <p>Studying how biological organisms interact with the physical world to move around efficiently.</p>
-          </div>
-          <div class="card">
-            <div class="card-icon">&#9651;</div>
-            <h3>AI-Powered Swimmers</h3>
-            <p>Using Reinforcement Learning to train optimal locomotion controllers and discover effective mechano-sensory cues for bio-inspired robotic swimmers.</p>
-          </div>
-          <div class="card">
-            <div class="card-icon">&#9711;</div>
-            <h3>Decentralized Multi-Agent Control</h3>
-            <p>Developing mathematical models for decentralized biological systems — such as fish schools and sea stars — to design autonomous distributed robotic systems.</p>
-          </div>
-          <div class="card">
-            <div class="card-icon">&#9670;</div>
-            <h3>Fluid-Structure Interaction</h3>
-            <p>Building efficient physics-based models to study how fish interact with and exploit their fluid environments.</p>
-          </div>
-        </div>
+    <div class="home-intro">
+      <img src="logo.png" alt="SCALE Lab Logo" class="home-logo" />
+      <h1>Smart Coordination and Locomotion Laboratory</h1>
+      <p>We combine physics-based models with data-driven approaches to analyze and control bio-inspired dynamical systems — from fish schooling to sea stars.</p>
+      <div class="home-intro-links">
+        <a href="publications.html" class="home-btn primary">Publications</a>
+        <a href="team.html" class="home-btn">Our Team</a>
+        <a href="contact.html" class="home-btn">Contact Us</a>
       </div>
-    </section>
+      <p class="home-affil-line">Department of Mechanical Engineering &mdash; California State University, Northridge</p>
+    </div>
 
-    <!-- Recent news -->
-    <section class="section news-section">
-      <div class="container">
-        <h2 class="section-title">Recent News</h2>
-        <ul class="news-list">
-          <li class="news-item">
-            <span class="news-date">Feb 2026</span>
-            <span class="news-text">Sara presented a poster at <strong>CSUNposium 2026</strong> — way to go, Sara!</span>
-          </li>
-          <li class="news-item">
-            <span class="news-date">Jan 2026</span>
-            <span class="news-text">Our paper <strong>"Tube Feet Dynamics Drive Adaptation in Sea Star Locomotion"</strong> published in <strong>PNAS</strong> and featured in <strong>Nature Physics</strong></span>
-          </li>
-          <li class="news-item">
-            <span class="news-date">Nov 2025</span>
-            <span class="news-text">Victor presented his research at <strong>APS DFD 2025</strong> in Houston, Texas (Nov 23–25) — way to go, Victor!</span>
-          </li>
-          <li class="news-item">
-            <span class="news-date">Oct 2025</span>
-            <span class="news-text">Dr. Heydari gave an invited talk at the <strong>UC Davis Mathematical Biology Seminar</strong></span>
-          </li>
-          <li class="news-item">
-            <span class="news-date">Aug 2025</span>
-            <span class="news-text">Dr. Heydari joined <strong>CSUN</strong> as Assistant Professor in the Mechanical Engineering Department</span>
-          </li>
-        </ul>
-      </div>
-    </section>
+    <hr class="home-divider" />
 
-    <!-- Affiliation strip -->
-    <section class="affil-strip">
-      <div class="container affil-inner">
-        <span>California State University, Northridge</span>
-        <span class="affil-dot">&bull;</span>
-        <span>Department of Mechanical Engineering</span>
-        <span class="affil-dot">&bull;</span>
-        <span>College of Engineering and Computer Science</span>
-      </div>
-    </section>
+    <div class="home-section">
+      <div class="home-section-title">Research Focus</div>
+      <ul class="research-list">
+        <li class="research-item">
+          <h3>Bio-inspired Locomotion</h3>
+          <p>Studying how biological organisms interact with the physical world to move efficiently.</p>
+        </li>
+        <li class="research-item">
+          <h3>AI-Powered Swimmers</h3>
+          <p>Using Reinforcement Learning to train optimal locomotion controllers for bio-inspired robotic swimmers.</p>
+        </li>
+        <li class="research-item">
+          <h3>Decentralized Multi-Agent Control</h3>
+          <p>Mathematical models for decentralized biological systems — fish schools and sea stars — to design distributed robotic systems.</p>
+        </li>
+        <li class="research-item">
+          <h3>Fluid-Structure Interaction</h3>
+          <p>Efficient physics-based models to study how fish interact with and exploit their fluid environments.</p>
+        </li>
+      </ul>
+    </div>
+
+    <hr class="home-divider" />
+
+    <div class="home-section">
+      <div class="home-section-title">Recent News</div>
+      <table class="news-table">
+        <tr>
+          <td class="nd">Feb 2026</td>
+          <td class="nt">Sara presented a poster at <strong>CSUNposium 2026</strong> — way to go, Sara!</td>
+        </tr>
+        <tr>
+          <td class="nd">Jan 2026</td>
+          <td class="nt">Our paper <strong>"Tube Feet Dynamics Drive Adaptation in Sea Star Locomotion"</strong> published in <strong>PNAS</strong> and featured in <strong>Nature Physics</strong>.</td>
+        </tr>
+        <tr>
+          <td class="nd">Nov 2025</td>
+          <td class="nt">Victor presented his research at <strong>APS DFD 2025</strong> in Houston, Texas — way to go, Victor!</td>
+        </tr>
+        <tr>
+          <td class="nd">Oct 2025</td>
+          <td class="nt">Dr. Heydari gave an invited talk at the <strong>UC Davis Mathematical Biology Seminar</strong>.</td>
+        </tr>
+        <tr>
+          <td class="nd">Aug 2025</td>
+          <td class="nt">Dr. Heydari joined <strong>CSUN</strong> as Assistant Professor in the Mechanical Engineering Department.</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="home-footer-strip">
+      California State University, Northridge &bull; College of Engineering and Computer Science
+    </div>
+
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <span>&copy; 2025 SCALE Lab</span>
+      <span>&copy; 2026 SCALE Lab</span>
       <span>Smart Coordination and Locomotion Laboratory</span>
     </div>
   </footer>
